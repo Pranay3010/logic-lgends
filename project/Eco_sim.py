@@ -1,9 +1,14 @@
 class Organism:
-    def __init__(self):
-        pass
+    def __init__(self,energy):
+        self.__energy= energy  # private vairable 
 
-    def energy(self):
-        pass
+    @property
+    def energy_level(self):
+        return self.__energy
+    
+    @energy_level.setter
+    def energy_level(self,energy):
+        self.__energy=energy
 
 class plant(Organism):
     
